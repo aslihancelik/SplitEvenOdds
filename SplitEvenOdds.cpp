@@ -19,12 +19,18 @@ int main() {
     // Create an instance of intLinkedList
     intLinkedList list;
 
-    // Insert some values into the original list
-    list.insertLast(10);
-    list.insertLast(15);
-    list.insertLast(20);
-    list.insertLast(25);
-    list.insertLast(30);
+    // Read values from the user to populate the list
+    int numElements;
+    cout << "Please enter the number of elements you would like to insert to the list: ";
+    cin >> numElements;
+
+    //Prompt the user to enter the values one by one while adding them to the list
+    for (int i = 1; i <= numElements; ++i) {
+        int value;
+        cout << "Enter value " << i << ": ";
+        cin >> value;
+        list.insertLast(value);
+    }
 
     cout << "Original list: ";
     // Display the original list using the range-based for loop with iterators
