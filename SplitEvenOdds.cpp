@@ -1,5 +1,13 @@
 // SplitEvenOdds.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// 
+// This program demonstrates a linked list of integers that splits its elements into two separate lists :
+// one for even numbers and one for odd numbers.After splitting, the original list becomes empty.
+
+// Key operations in this file include :
+// Inserting integers into the list.
+// Splitting the list into even and odd lists.
+// Printing the elements of all lists using a range - based for loop with iterators.
+
 
 #include <iostream>
 #include "intLinkedList.h"
@@ -7,6 +15,7 @@
 using namespace std;
 
 int main() {
+
     // Create an instance of intLinkedList
     intLinkedList list;
 
@@ -17,20 +26,10 @@ int main() {
     list.insertLast(25);
     list.insertLast(30);
 
-    // Display the original list
     cout << "Original list: ";
-    //list.print(); // Assuming print() is defined in unorderedLinkedList
-    /*
-    cout << "Original list: ";
-    for (auto it = list.begin(); it != list.end(); ++it) {
-        cout << *it << " ";
-    }
-    cout << endl;
-    */
+    // Display the original list using the range-based for loop with iterators
 
-    // Display the original list using the range-based for loop
-    cout << "Original list: ";
-    for (auto x : list) { // Use range-based for loop with iterators
+    for (auto x : list) { 
         cout << x << " ";
     }
     cout << endl;
@@ -41,61 +40,29 @@ int main() {
 
     // Call splitEvensOddsList to split the original list into evens and odds
     list.splitEvensOddsList(evensList, oddsList);
-    /*
-    // Display the even numbers list
-    cout << "\nEven numbers list: ";
-    evensList.print(); // Assuming print() is defined in unorderedLinkedList
 
-    // Display the odd numbers list
-    cout << "\nOdd numbers list: ";
-    oddsList.print(); // Assuming print() is defined in unorderedLinkedList
-
-    // Display the original list after splitting (should be empty)
-    cout << "\nOriginal list after splitting (should be empty): ";
-    list.print(); // Assuming print() is defined in unorderedLinkedList
-    */
-    /*
+    // Display the even numbers list using range-based for loop with iterators
     cout << "Even numbers list: ";
-    for (auto it = evensList.begin(); it != evensList.end(); ++it) {
-        cout << *it << " ";
-    }
-    cout << endl;
-
-    cout << "Odd numbers list: ";
-    for (auto it = oddsList.begin(); it != oddsList.end(); ++it) {
-        cout << *it << " ";
-    }
-    cout << endl;
-
-    // Check if the original list is empty after the split
-    cout << "Original list after splitting (should be empty): ";
-    for (auto it = list.begin(); it != list.end(); ++it) {
-        cout << *it << " ";
-    }
-    cout << endl;
-    */
-
-    // Display the even numbers list
-    cout << "Even numbers list: ";
-    for (auto x : evensList) { // Use range-based for loop with iterators
+    for (auto x : evensList) { 
         cout << x << " ";
     }
     cout << endl;
 
-    // Display the odd numbers list
+    // Display the odd numbers list using range-based for loop with iterators
     cout << "Odd numbers list: ";
-    for (auto x : oddsList) { // Use range-based for loop with iterators
+    for (auto x : oddsList) { 
         cout << x << " ";
     }
     cout << endl;
 
-    // Check if the original list is empty after the split
+    // Check if the original list is empty after the split use range-based for loop with iterators
     cout << "Original list after splitting (should be empty): ";
-    for (auto x : list) { // Use range-based for loop with iterators
+    for (auto x : list) { 
         cout << x << " ";
     }
     cout << endl;
 
 
     return 0;
+
 }
