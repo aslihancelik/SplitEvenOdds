@@ -21,7 +21,6 @@ public:
 };
 
 void intLinkedList::splitEvensOddsList(intLinkedList& evensList, intLinkedList& oddsList) {
-    //the definition for the function
 
     //Pointer to traverse the original list
     nodeType<int> *current = this->first;
